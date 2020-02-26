@@ -20,7 +20,6 @@ init =
 
 ---- UPDATE ----
 
-
 type Msg
     = NoOp
 
@@ -30,14 +29,13 @@ update msg model =
     ( model, Cmd.none )
 
 
-
 ---- VIEW ----
 
 
 view : Model -> Html Msg
 view model =
     div []
-        [ img [ src "/logo.svg" ] []
+        [ img [ src "/me.jpg" ] []
         , h1 [] [ text "Your Elm App is working!" ]
         ]
 
@@ -54,3 +52,4 @@ main =
         , update = update
         , subscriptions = always Sub.none
         }
+

@@ -23,4 +23,5 @@ h1 {
 img {
   margin: 20px 0;
   max-width: 200px;
+  border-radius: 50%;
 }
