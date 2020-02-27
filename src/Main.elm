@@ -2,7 +2,7 @@ module Main exposing (..)
 
 import Browser
 import Html exposing (..)
-import Html.Attributes exposing (src)
+import Html.Attributes exposing (..)
 
 ---- MODEL ----
 
@@ -26,14 +26,33 @@ update msg model =
 ---- VIEW ----
 avatar : List (Html Msg)
 avatar =
-    [ img [ src "/me.jpg" ] [ text "yo"]
+    [ img [ src "/logo.svg" ] [ text "yo"]
     , h1 [] [ text "Welcome" ]
     ]
 
+project : List (Html Msg)
+project =
+    [ h1 [] [ text "My Grocery List" ]
+    , ul []
+        [ li [] [ text "Black Beans" ]
+        , li [] [ text "Limes" ]
+        , li [] [ text "Greek Yogurt" ]
+        , li [] [ text "Cilantro" ]
+        , li [] [ text "Honey" ]
+        , li [] [ text "Sweet Potatoes" ]
+        , li [] [ text "Cumin" ]
+        , li [] [ text "Chili Powder" ]
+        , li [] [ text "Quinoa" ]
+        ]
+    ]
+    
+
 view : Model -> Html Msg
 view model =
-    div [] avatar
-
+    div [] [
+         div [] avatar
+        ,div [ id "Project"] project
+    ]
 ---- PROGRAM ----
 
 main : Program () Model Msg

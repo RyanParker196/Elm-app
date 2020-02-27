@@ -16,8 +16,13 @@ body {
   color: #293c4b;
 }
 
+#Project {
+  height: 500px;
+  background-color: aqua;
+}
+
 div {
-  height: 1000px;
+  height: 300px;
 }
 
 h1 {
