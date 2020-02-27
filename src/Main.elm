@@ -30,6 +30,7 @@ view model =
     div []
         [ img [ src "/me.jpg" ] [ text "yo"]
         , h1 [] [ text "Your Elm App is working!" ]
+        --, button [ onClick green ] [text "Click Me"]
         ]
 
 ---- PROGRAM ----
