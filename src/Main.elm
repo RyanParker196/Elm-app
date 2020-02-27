@@ -10,7 +10,7 @@ import Html.Attributes exposing (src)
 type alias Model =
     {}
 
-init : (Model, Cmd Msg )
+init : (Model, Cmd Msg)
 init =
     ( {}, Cmd.none )
 
@@ -24,14 +24,15 @@ update msg model =
     ( model, Cmd.none )
 
 ---- VIEW ----
+avatar : List (Html Msg)
+avatar =
+    [ img [ src "/me.jpg" ] [ text "yo"]
+    , h1 [] [ text "Welcome" ]
+    ]
 
 view : Model -> Html Msg
 view model =
-    div []
-        [ img [ src "/me.jpg" ] [ text "yo"]
-        , h1 [] [ text "Your Elm App is working!" ]
-        --, button [ onClick green ] [text "Click Me"]
-        ]
+    div [] avatar
 
 ---- PROGRAM ----
 
