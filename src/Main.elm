@@ -26,23 +26,22 @@ update msg model =
 ---- VIEW ----
 avatar : List (Html Msg)
 avatar =
-    [ img [ src "/logo.svg" ] [ text "yo"]
+    [ img [ src "/me.jpg" ] [ text "yo"]
     , h1 [] [ text "Welcome" ]
     ]
 
-project : List (Html Msg)
-project =
-    [ h1 [] [ text "My Grocery List" ]
+projects : List (Html Msg)
+projects =
+    [ h1 [] [ text "List of Projects" ]
     , ul []
-        [ li [] [ text "Black Beans" ]
-        , li [] [ text "Limes" ]
-        , li [] [ text "Greek Yogurt" ]
-        , li [] [ text "Cilantro" ]
-        , li [] [ text "Honey" ]
-        , li [] [ text "Sweet Potatoes" ]
-        , li [] [ text "Cumin" ]
-        , li [] [ text "Chili Powder" ]
-        , li [] [ text "Quinoa" ]
+        [ li [] [ text "Project" ]
+        , li [] [ text "Project" ]
+        , li [] [ text "Project" ]
+        , li [] [ text "Project" ]
+        , li [] [ text "Project" ]
+        , li [] [ text "Project" ]
+        , li [] [ text "Project" ]
+        , li [] [ text "Project" ]
         ]
     ]
     
@@ -51,7 +50,7 @@ view : Model -> Html Msg
 view model =
     div [] [
          div [] avatar
-        ,div [ id "Project"] project
+        ,div [ id "Project"] projects
     ]
 ---- PROGRAM ----
 
